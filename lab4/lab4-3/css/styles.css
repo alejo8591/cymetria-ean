@@ -1,0 +1,63 @@
+body{
+	background: #C39327;
+}
+
+.card{
+	height: 250px;
+	margin: 8px;
+	width: 180px;
+	-webkit-perspective:600;
+}
+
+.face{
+	border-radius: 10px;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+
+	-webkit-backface-visibility: hidden;
+}
+
+
+.front{
+	background: #7A5151;
+}
+
+.back{
+	background: #E37777;
+
+	-webkit-transform: rotate3d(0,1,0, -180deg);
+	-moz-transform: rotate3d(0,1,0, -180deg);
+	transform: rotate3d(0,1,0, -180deg);
+
+}
+
+.card-flipped .front{
+	-webkit-transform: rotate3d(0,1,0, 180deg);
+	-moz-transform: rotate3d(0,1,0, 180deg);
+	transform: rotate3d(0,1,0, 180deg);
+
+}
+
+.card-flipped .back{
+	-webkit-transform: rotate3d(0,1,0, 0deg);
+	-moz-transform: rotate3d(0,1,0, 0deg);
+	transform: rotate3d(0,1,0, 0deg);
+
+}
+
+.card-a{
+	background: url(../img/ac.png);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+.lines{
+	background-color: #eee;
+	color: #222;
+}
+
+tr.linesHover{
+	background-color: #FFFADC;
+}

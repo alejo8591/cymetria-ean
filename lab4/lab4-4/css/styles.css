@@ -1,0 +1,64 @@
+.game{
+	-webkit-perspective: 3000;
+}
+
+.game-two{
+	-webkit-perspective: 600;
+}
+
+.game .cube{
+	height: 400px;
+	margin: 100px auto;
+	position: relative;
+	
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(-30deg) rotateY(42deg);
+
+	width: 400px;
+}
+
+.face{
+	border: 10px solid #191919;
+
+	background: rgba(90, 90, 90, 0.6);
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+
+	font-size: 50px;
+
+	position: absolute;
+	height: 295px;
+	width: 295px;
+}
+
+.cube .one {
+	-webkit-transform: rotateX(90deg) translateZ(150px);
+}
+
+.cube .two {
+	-webkit-transform: translateZ(150px);
+}
+
+.cube .three {
+	-webkit-transform: rotateY(90deg) translateZ(150px);
+}
+
+.cube .four {
+	-webkit-transform: rotateY(180deg) translateZ(150px);
+}
+
+.cube .five {
+	-webkit-transform: rotateY(-90deg) translateZ(150px);
+}
+
+.cube .six {
+	-webkit-transform: rotateX(-90deg) translateZ(150px) rotate(180deg);
+}
+
+
+
+
+
+

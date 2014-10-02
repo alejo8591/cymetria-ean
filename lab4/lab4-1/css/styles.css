@@ -1,0 +1,53 @@
+/* Verificar los prefijos que se debe poner al momento de utilizar CSS3
+	URL: http://www.w3schools.com/cssref/css3_browsersupport.asp
+ */
+
+body{
+ background: #ADADAD;
+}
+
+.card{
+	width: 180px;
+	height: 252px;
+	margin: 20px;
+	background: #EFEFEF;
+	position: absolute;
+
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
+}
+
+.card-a{
+	background: url(../img/ac.png);
+}
+
+.card-b{
+	background: url(../img/ah.png);
+}
+
+/* Transformación de los estilos a través de CSS3 */
+.rotate-right{
+	/* -webkit-transform: rotate3d(eje X,eje Y, eje Z, Grados); */
+	-webkit-transform: rotate3d(0,0,1, 90deg);
+	-moz-transform: rotate3d(0,0,1, 90deg);
+	transform: rotate3d(0,0,1, 90deg);
+}
+
+.move-scale{
+	-webkit-transform: translate3d(150px, 150px, 0) scale3d(1.5,1.5,1);
+	-moz-transform: translate3d(150px, 150px, 0) scale3d(1.5,1.5,1);
+	transform: translate3d(150px, 150px, 0) scale3d(1.5,1.5,1);
+}
+
+
+
+
+
+
+
+
+
+
+

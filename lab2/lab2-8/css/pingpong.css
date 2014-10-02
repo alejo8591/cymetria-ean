@@ -1,0 +1,32 @@
+#info div #play{
+	background: #333;
+	width: 400px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+#info div #ball{
+	background:  #fff;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 150px;
+	top: 100px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#info div .paddle{
+	background: #fff;
+	left: 50px;
+	top: 70px;
+	position: absolute;
+	width: 30px;
+	height: 70px;
+}
+
+#info div #racketB{
+	left: 320px;
+}

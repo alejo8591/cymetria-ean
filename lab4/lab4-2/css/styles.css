@@ -1,0 +1,81 @@
+#game{
+	background: #92C892;
+	padding: 5px;
+}
+
+.card{
+	height: 250px;
+	margin: 8px;
+	width: 180px;
+	-webkit-perspective: 600;
+	-moz-perspective: 600;
+	perspective: 600;
+}
+
+.face{
+	border-radius: 10px;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.front{
+	background: #805555;
+
+	/* garantizar que la cara superior realmente este por encima */
+	z-index: 10;
+
+}
+
+.back{
+	background: #E89090;
+
+	-webkit-transform: rotate3d(0,1,0, -180deg);
+	-moz-transform: rotate3d(0,1,0, -180deg);
+	transform: rotate3d(0,1,0, -180deg);
+
+	/* garantizar que la cara posterior este por debajo de la superior  */
+	z-index: 8;
+}
+
+
+.card-flipped .front{
+	-webkit-transform: rotate3d(0,1,0, 180deg);
+	-moz-transform: rotate3d(0,1,0, 180deg);
+	transform: rotate3d(0,1,0, 180deg);
+
+	z-index: 8;
+}
+
+.card-flipped .back{
+	-webkit-transform: rotate3d(0,1,0, 0deg);
+	-moz-transform: rotate3d(0,1,0, 0deg);
+	transform: rotate3d(0,1,0, 0deg);
+
+	z-index: 10;
+
+}
+
+.card-a{
+	background: url(../img/ac.png);
+}
+
+.card-b{
+	background: url(../img/ah.png);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+#info{
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#info h3{
+	margin: 0;
+	padding: 5px 0 5px 10px;
+	background-color: #93C4EC;
+	border-bottom: 1px solid #fff;
+	color: #00319A;
+	font-weight: normal;
+}
+
+#info div{
+	background-color: #F5F3EA;
+	border-bottom: 1px solid #FFF;
+	position: relative;
+	height: auto;
+}
+
+#info img{
+	margin: 10px;
+	background-color: #F4F5EA;
+}
+
+#info p{
+	position: absolute;
+	left: 120px;
+	top: 10px;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+#info div#play{
+	background: #333;
+	width: 400px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+#info div#ball{
+	background:  #fff;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 150px;
+	top: 100px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#info div.paddle{
+	background: #fff;
+	left: 50px;
+	top: 70px;
+	position: absolute;
+	width: 30px;
+	height: 70px;
+}
+
+#info div#racketB{
+	left: 320px;
+}
