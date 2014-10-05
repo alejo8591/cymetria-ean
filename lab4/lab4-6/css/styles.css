@@ -1,0 +1,251 @@
+/*** START: Agregado en el lab4-6 ***/
+
+
+/* Primera forma de uso a través de CSS */
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin-ext,latin);
+
+#num div{
+	font-family: 'Lobster', arial;
+}
+
+/* Segunda forma de uso a través de CSS */
+
+@font-face{
+	font-family: lobster;
+	src: url(http://fonts.googleapis.com/css?family=Lobster&subset=latin-ext,latin);
+}
+
+/*** END: Agregado en el lab4-6 ***/
+
+body{
+	text-align: center;
+	background: #C18661;
+	color: #CCC;
+}
+
+a, a:visited{
+	color: #99EA99;
+	text-decoration: none;
+	-webkit-transition: all 0.3s;
+	padding: 5px;
+}
+
+a:hover{
+	color: #000;
+	background: #99EA99;
+	text-shadow: none;
+}
+
+#game{
+	position: relative;
+	height: 600px;
+	width: 600px;
+
+	margin: 0 auto;
+
+	/* Flexbox para comportamiento flipcard */
+	display: -webkit-box;
+	-webkit-box-align: top;
+	-webkit-box-pack: top;
+}
+
+#cards {
+	position: relative;
+	width: 380px;
+	height: 400px;
+}
+
+
+.card{
+	-webkit-perspective: 600;
+	width: 124px;
+	height: 180px;
+
+	position: absolute;
+
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.face{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+
+	-webkit-transition-property: opacity, -webkit-transform, -webkit-box-shadow;
+	-webkit-transition-duration: 0.3s;
+
+	transition-property: opacity, transform, box-shadow;
+	transition-duration: 0.3s;
+
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+}
+
+.front{
+	background: #999 url(../img/sprite.gif) -1px -725px;
+	z-index: 10;
+}
+
+.back{
+	background: #EFEFEF url(../img/sprite.gif);
+
+	-webkit-transform: rotate3d(0,1,0, -180deg);
+	transform: rotate3d(0,1,0, -180deg);
+
+	z-index: 8;
+}
+
+.card:hover .face{
+	-webkit-box-shadow: 0 0 20px #AAA;
+	box-shadow: 0 0 10px #AAA;
+}
+
+.card-flipped .face{
+	-webkit-box-shadow: 0 0 20px #AAA;
+	box-shadow: 0 0 10px #AAA;
+}
+
+
+.card-flipped .front{
+	-webkit-transform: rotate3d(0,1,0, 180deg);
+	transform: rotate3d(0,1,0, 180deg);
+
+	z-index: 8;
+}
+
+.card-flipped .back{
+	-webkit-transform: rotate3d(0,1,0, 0deg);
+	transform: rotate3d(0,1,0, 0deg);
+	
+	z-index: 10;
+}
+
+.card-removed{
+	opacity: 0;
+}
+
+
+/* Trabajando sobre la posición en el sprite */
+
+.card-a-j { 
+	background-position: -1126px -1px; 
+ }
+
+ .card-a-q {
+ 	background-position: -1251px -1px;
+ }
+
+.card-a-k {
+	background-position: -1376px -1px;
+}
+
+.card-b-j { 
+	background-position: -1126px -544px; 
+ }
+
+ .card-b-q {
+ 	background-position: -1251px -544px;
+ }
+
+.card-b-k {
+	background-position: -1376px -544px;
+}
+
+.card-c-j { 
+	background-position: -1126px -182px; 
+ }
+
+ .card-c-q {
+ 	background-position: -1251px -182px;
+ }
+
+.card-c-k {
+	background-position: -1376px -182px;
+}
+
+
+.card-d-j { 
+	background-position: -1126px -363px; 
+ }
+
+ .card-d-q {
+ 	background-position: -1251px -363px;
+ }
+
+.card-d-k {
+	background-position: -1376px -363px;
+}
+
+/*** START: Agregado en el lab4-6 ***/
+
+#popup{
+	font-family: lobster, serif;
+	font-size: 28px;
+	font-weight: 400;
+	text-shadow: 0px 1px 2px #fff;
+
+	color: #222;
+
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+
+	background: rgba(0,0,0,0.5);
+
+	display: -webkit-box;
+
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+
+	-webkit-transition: all 0.5s ease-in;
+}
+
+#popup h1{
+	font-weight: 400;
+}
+
+#popup-box{
+	width: 400px;
+	height: 300px;
+
+	background: #CCC;
+
+	border-radius: 10px;
+
+	-webkit-box-shadow: 0 5px 5px #333;
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+
+	-webkit-transition: all 0.5s ease-in;
+}
+
+#popup-box small{
+	font-size: 0.6em;
+}
+
+/* Ocultando el popup */
+#popup.hide{
+	background: rgba(0,0,0,0);
+	visibility: hidden;
+}
+
+#popup.hide #popup-box{
+	margin-top: -800px;
+}
+
+/*** END: Agregado en el lab4-6 ***/
+
+
+
+
+
+

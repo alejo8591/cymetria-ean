@@ -49,6 +49,16 @@ $(function(){
 		$(this).click(selectCard);
 	});
 
+	/******************* START: Agregado en el lab4-6 ***************/
+
+	// reset del tiempo transcurrido
+	game.elapsed_time = 0;
+
+	// start time
+	game.timer = setInterval(counterTimer, 1000);
+
+	/******************* END: Agregado en el lab4-6 *****************/
+
 });
 
 function selectCard(){
@@ -70,7 +80,6 @@ function selectCard(){
 
 // funcion para cuando ambas tarjetas son iguales o no
 function checkPattern(){
-	
 	if(isMatchPattern()){
 		$('.card-flipped').removeClass('card-flipped').addClass('card-removed');
 
@@ -87,6 +96,12 @@ function checkPattern(){
 function removeTookCards(){
 
 	$('.card-removed').remove();
+
+	/******************* START: Agregado en el lab4-6 ***************/
+	if($('.card').length === 0){
+		endGame();
+	}
+	/******************* END: Agregado en el lab4-6 *****************/ 
 }
 
 // funcion para verificar si la carta volteada coincide con el patron definido en game.sprite[posición]
@@ -104,8 +119,66 @@ function isMatchPattern(){
 
 	console.log("las cartas son iguales: " + (pattern === another_pattern));
 
+
 	return (pattern === another_pattern);
 }
+
+/******************* START: Agregado en el lab4-6 ***************/
+
+function counterTimer(){
+
+	game.elapsed_time++;
+
+	// Calcular los minutos y segundos de tiempo transcurridos
+	var minute = Math.floor(game.elapsed_time / 60);
+	var second = game.elapsed_time % 60;
+
+	// Agregando 0 cuando los minutos o segundos son menores a 10
+	if(minute < 10) minute = "0" + minute;
+	if(second < 10) second = "0" + second;
+
+	// Mostrando el tiempo transcurrido en el html
+	$('#elapsed-time').html(minute + ":" + second);
+}
+
+function endGame(){
+	// Deteniendo el tiempo
+	clearInterval(game.timer);
+
+	// Colocando un puntaje con respecto al tiempo transcurrido
+	$('#score').html($('#elapsed-time').html());
+
+
+	/******************* START: Agregado en el lab4-7 ***************/
+
+	// cargar la ultima información almacenada en local storage con el valor identificador 'last-elapsed-time'
+	var last_elapsed_time = localStorage.getItem('last-elapsed-time');
+
+	// Convertimos el tiempo transcurrido en minutos:segundos
+	// Calculamos los minutos y segundos de tiempo transcurrido
+	var minute = Math.floor(last_elapsed_time / 60);
+	var second = last_elapsed_time % 60;
+
+	// Agregando 0 cuando los minutos o segundos son menores a 10
+	if(minute < 10) minute = "0" + minute;
+	if(second < 10) second = "0" + second;
+
+	// Mostrando la información construida con las variables `minute` y `second`
+	$('.last-score').html(minute+":"+second);
+
+	// Salvando el nuevo tiempo
+	localStorage.setItem('last-elapsed-time', game.elapsed_time);
+
+	/******************* END: Agregado en el lab4-7 *****************/
+	// show popup
+
+	$('#popup').removeClass('hide');
+}
+/******************* END: Agregado en el lab4-6 *****************/
+
+
+
+
 
 
 
