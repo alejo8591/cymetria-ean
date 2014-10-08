@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<title>Validación de Formularios</title>
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h2>Un Formulario de Solicitud de Alimentos</h2>
+		</div>
+		<div id="content">
+			<div id="comment">
+				<h3>Tu información aquí</h3>
+				<form action="">
+					<div>
+						<div id="user-info">
+							<span class="label">Documento de Identidad</span>
+							<input type="text" id="nid" />
+							<span class="nid-error"></span>
+
+							<span class="label">Nombre(s) y Apellido(s)</span>
+							<input type="text" id="username" />
+							<span class="user-error"></span>
+						</div>
+					</div>
+					<div>
+						<div id="user">
+							<span class="label">Password</span>
+							<input type="password" class="password" name="password" />
+							<span class="password-error"></span>
+
+							<span class="label">Confirmar Password</span>
+							<input type="password" class="conf-password" name="conf-password" />
+							<span class="conf-password-error"></span>
+
+							<span class="label">Email</span>
+							<input type="text" class="email-add" name="email-add" />
+							<span class="email-error"></span>
+						</div>
+					</div>
+					
+					<div>
+						<div id="checkboxes">
+							<span class="label">Seleccionar Alimento(s)</span>
+							<input type="checkbox" id="pizza" name="pizza" value=5000 class="chkb" />Pizza - $5000 <br />
+							<input type="checkbox" id="hotdog" name="hotdog" value=7500 class="chkb" />HotDog - $7500 <br />
+							<input type="checkbox" id="coke" name="coke" value=2500 class="chkb" />Coca-Cola - $2500 <br />
+							<input type="checkbox" id="fries" name="fries" value=3000 class="chkb" />Papas Fritas - $3000 <br />
+							<span class="food-error"></span> <br />
+							<span class="food-total"></span><br />
+						</div>
+					</div>
+					
+					<div>
+						<div id="radios">
+							<span class="label">Modo de Pago</span>
+							<input type="radio" name="paymode" class="radio-btn" value="Master Card" /> Master Card <br />
+							<input type="radio" name="paymode" class="radio-btn" value="Visa" />Visa <br />
+						</div>
+					</div>
+
+					<div>
+						<div>
+							<span class="label">Ciudad</span>
+
+							<select name="city" id="city" class="infobox">
+								<option value="0">Seleccione una Ciudad</option>
+								<option value="Barranquilla">Barranquilla</option>
+								<option value="Bogota">Bogotá</option>
+								<option value="Calí">Calí</option>
+								<option value="Cartagena">Cartagena</option>
+								<option value="Medellin">Medellin</option>
+							</select><br />
+							<span class="city-error"></span>
+						</div>
+					</div>
+					<div id="buttons">
+						<button class="button" href="#">Enviar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Sección para el Modal -->
+	<div id="open-modal" class="modal-dialog">
+		<div>
+		</div>
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script src="js/lab6-4.js"></script>
+</body>
+</html>
