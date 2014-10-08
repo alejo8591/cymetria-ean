@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Slider en HTML5 y JS</title>
+		
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/jquery-ui.min.css" />
+		<link rel="stylesheet" href="../css/jquery-ui.structure.min.css" />
+		<link rel="stylesheet" href="../css/jquery-ui.theme.min.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>Slider con jQueryUI</h1>
+			</div>
+			<div id="content">
+				<h2>Personas</h2>
+				<div id="price-range">
+					<form action="">
+						<fieldset>
+							<label for="min">Precio Minimo</label>
+							<select name="min" id="min">
+								<option value="0">0</option>
+								<option value="10">10</option>
+								<option value="20">20</option>
+								<option value="30">30</option>
+								<option value="40">40</option>
+								<option value="50">50</option>
+								<option value="60">60</option>
+								<option value="70">70</option>
+								<option value="80">80</option>
+								<option value="90">90</option>
+							</select>
+							<br />
+							<label for="max">Precio Maximo</label>
+							<select name="max" id="max">
+								<option value="10">10</option>
+								<option value="20">20</option>
+								<option value="30">30</option>
+								<option value="40">40</option>
+								<option value="50">50</option>
+								<option value="60">60</option>
+								<option value="70">70</option>
+								<option value="80">80</option>
+								<option value="90">90</option>
+								<option value="100">100</option>
+							</select>
+						</fieldset>
+					</form>
+				</div>
+
+				<table class="data">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Ocupación</th>
+							<th>Ubicación</th>
+							<th>Precio hora</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1234</td>
+							<td>John Resig</td>
+							<td>Hace algo</td>
+							<td>Silicon Valley</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>123q</td>
+							<td>Sigur Rós</td>
+							<td>También hace algo</td>
+							<td>Islandia</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>34554</td>
+							<td>Pacho Galán</td>
+							<td>Algo</td>
+							<td>Soledad</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>32343</td>
+							<td>Jake</td>
+							<td>Adventure</td>
+							<td>USA</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td>343422</td>
+							<td>Finn</td>
+							<td>Times</td>
+							<td>Algún lugar</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>007FF</td>
+							<td>Kellie kelly</td>
+							<td>Cantante de Karaoke</td>
+							<td>Bogotá</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td>5555</td>
+							<td>Daft Punk</td>
+							<td>Algo</td>
+							<td>Francia</td>
+							<td>70</td>
+						</tr>
+						<tr>
+							<td>1235</td>
+							<td>Daft Punk</td>
+							<td>Algo</td>
+							<td>Francia</td>
+							<td>80</td>
+						</tr>
+						<tr>
+							<td>43355</td>
+							<td>Daft Punk</td>
+							<td>Algo</td>
+							<td>Francia</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>5555</td>
+							<td>Daft Punk</td>
+							<td>Algo</td>
+							<td>Francia</td>
+							<td>100</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- llamado de Scripts -->
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>		
+		<script src="js/lab5-1.js"></script>
+	</body>
+</html>

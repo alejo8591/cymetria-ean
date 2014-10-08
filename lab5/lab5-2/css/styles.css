@@ -1,0 +1,21 @@
+#photo-grid img {
+	cursor: move;
+	width: 100px;
+}
+
+.trash{
+	padding: 10px 10px;	
+	border: 1px solid white;
+	margin-bottom: 10px;
+	width: 50%;
+}
+
+.highlight{
+	border: 1px dashed #B5C051;
+	-moz-border-radius: 10;
+	border-radius: 10px; 
+}
+
+.highlight-accept{
+	background: #D9DFA4;
+}

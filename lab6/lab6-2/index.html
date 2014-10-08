@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<title>Validación de Formularios</title>
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h2>Contando la cantidade caracteres en Textarea</h2>
+		</div>
+		<div id="content">
+			<div id="comment">
+				<h2>Tu comentario es importante</h2>
+				<form action="">
+					<div>
+						<label for="name">Nombre:</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div>
+						<label for="comment-text">Comentario:</label>
+						<textarea name="comment-text" id="comment-text" cols="30" rows="7" class="max-length"></textarea>
+					</div>
+					<div>
+						<input type="submit" value="Enviar Comentario" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts -->
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script src="js/lab6-2.js"></script>
+</body>
+</html>
