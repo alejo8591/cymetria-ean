@@ -1,0 +1,106 @@
+html, body{
+	font-size: 1.2em;
+	font-family: Arial, serif;
+	text-align: center;
+}
+
+/* Mensaje de juego perdido o ganado */
+#hangm-gameover, #hangm-victory{
+	font-size: 2em;
+}
+
+section#hangman{
+	height: 30.5em;
+	overflow: hidden;
+}
+
+#hangm{
+	text-align: center;
+}
+
+#hangm > .h, #hangm > div > .h{
+	display: none;
+}
+
+#hangm-animation{
+	height: 10em;
+	margin: 0 auto;
+	width: 11em;
+}
+
+/* Espaciado entre la palabra a adivinar y los simbolos `_` */
+#hangm-word,
+#hangm-guesses{
+	letter-spacing: 1em;
+}
+
+/* Dibujando el monachito */
+.man-head{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: #FFCC99;
+	position: relative;
+	bottom: 150px;
+	left: 112px;
+}
+
+.man-upper{
+	background: #000066;
+	width: 40px;
+	height: 50px;
+	position: relative;
+	left: 112px;
+	bottom: 150px;
+}
+
+.man-lower{
+	background: #330099;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	left: 117px;
+	bottom: 150px;
+}
+
+
+.pole-h{
+	background: #000;
+	width: 100px;
+	height: 8px;
+	position: relative;
+	left: 46px;
+}
+
+.pole-v{
+	width: 8px;
+	height: 150px;
+	background: #000;
+	left: 46px;
+	position: relative;
+}
+
+.pole-b{
+	border-color: transparent transparent #000 transparent;
+	border-width: 0 50px 50px 50px;
+	border-style: solid;
+	width: 0;
+	height: 0;
+	bottom: 10px;
+	position: relative;
+}
+
+.rope{
+	width: 6px;
+	height: 40px;
+	background-color: #996633;
+	position: relative;
+	bottom: 150px;
+	left:130px;
+}
+
+.cut-out{
+	height: 2em;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<title>Ahorcado</title>
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<div id="hangm">
+		<div class="cut-out">
+			<div id="hangm-end" class="h"></div>
+		</div>
+		<!-- Pintando el monachito -->
+		<div id="hangm-animation">
+			<div id="hangm-1" class="h pole-h"></div>
+			<div id="hangm-2" class="h pole-v"></div>
+			
+			<div id="hangm-3" class="h rope"></div>
+
+			<div id="hangm-4" class="h man-head"></div>
+			<div id="hangm-5" class="h man-upper"></div>
+			<div id="hangm-6" class="h man-lower"></div>
+		</div>
+		
+		<div id="clue">
+		</div>
+		<div class="cut-out">
+			<div id="hangm-guesses" class="h"></div>
+		</div>
+
+		<form action="">
+			<div>
+				Adivina la palabra: <div id="hangm-word"></div>
+			</div>
+			<div>
+				<div>
+					<input type="text" id="guess" />
+				</div>
+				<div>
+					<button>Reiniciar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- Scripts para el juego -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/hangman.js"></script>
+	<script src="js/lab7.js"></script>
+
+</body>
+</html>

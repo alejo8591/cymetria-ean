@@ -99,14 +99,13 @@ $(document).ready(function(){
 
 		if(len < 1 && len !== ""){
 			$('.password').next().show();
-			$('.password').removeClass('success').addClass('error');
+			$('.password').addClass('error');
 			$('.password-error').next().show();
 			$('.password-error').text('Indique una contraseña');
 			event.preventDefault();
 		} else {
 			$('.password').next().show();
-			$('.password').removeClass('error').addClass('success');
-			$('.password-error').hide();
+			$('.password-error').next().hide();
 		}
 
 		var conf_data = $('.conf-password').val();
@@ -121,20 +120,18 @@ $(document).ready(function(){
 			event.preventDefault();
 		
 		} else{
-			$('.conf-password').show();
-			$('.conf-password').removeClass('error').addClass('success');
-			$('.conf-password-error').hide();
+			$('.conf-password').next().show();
+			$('.conf-password-error').next().hide();
 		}
 
 		// comprobando que las contraseñas sean correctas
-		if($('.password').val() !== $('.conf-password').val() || $('.password').val().length === 0 || $('.conf-password').val().length === 0 || $('.password').val() === "" || $('.conf-password').val() === ""){
-			$('.conf-password').show();
-			$('.conf-password-error').show();
+		if($('.password').val() !== $('.conf-password').val()){
+			$('.conf-password').next().show();
+			$('.conf-password-error').next().show();
 			$('.conf-password').removeClass('success').addClass('error');
 			$('.conf-password-error').text('¡Las contraseñas no coinciden!');
 		} else {
 			$('.conf-password').next().show();
-			$('.conf-password').removeClass('error').addClass('success');
 			$('.conf-password-error').hide();
 			localStorage.setItem('password', data);
 		}
@@ -144,10 +141,10 @@ $(document).ready(function(){
 
 		if(validate.email(data)){
 			$('.email-error').hide();
-			$('.email-add').removeClass('error').addClass('success');
+			$('.email-add').addClass('success');
 			localStorage.setItem('email', data);
 
-			$('#buttons').append('<a id="info" href="#open-modal" class="button">Ver pedido</a>');
+			$('#buttons').append('<a id="info" href="#open-modal">Ver pedido</a>');
 		} else {
 			$('.email-add').next().show();
 			$('.email-error').show();
@@ -155,8 +152,6 @@ $(document).ready(function(){
 			$('.email-error').text('¡El email es incorrecto!');
 			event.preventDefault();
 		}
-
-		event.preventDefault();
 	});
 });
 
